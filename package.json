@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "start": "nodemon --exec babel-node src/server.js",
-    "build": "babel src --out-dir dist --ignore src/test",
-    "serve": "rm -r dist/test && node dist/server.js",
-    "localprod": "npm install && npm run build && cross-env PORT=80 NODE_ENV=production npm run serve",
     "test": "babel src --out-dir dist && mocha 'dist/test/**/*.js'",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "localprod": "npm install && npm run build && cross-env PORT=80 NODE_ENV=production npm run serve",
+    "build": "babel src --out-dir dist --ignore src/test",
+    "serve": "node dist/server.js"
   },
   "dependencies": {
     "ajv": "^6.10.0",
