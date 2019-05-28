@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run debug",
     "debug": "nodemon --exec babel-node src/server.js",
     "build": "babel src --out-dir dist",
     "serve": "node dist/server.js",
-    "prod": "npm install && npm run build && cross-env PORT=80 NODE_ENV=production npm run serve",
+    "localprod": "npm install && npm run build && cross-env PORT=80 NODE_ENV=production npm run serve",
+    "heroku": "node dist/server.js",
     "lint": "eslint src/"
   },
   "dependencies": {
