@@ -11,6 +11,5 @@
   ],
   "ignore":[
     "src/logs",
-    "src/test"
   ]
 }

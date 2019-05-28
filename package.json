@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "debug": "nodemon --exec babel-node src/server.js",
-    "build": "babel src --out-dir dist",
-    "serve": "node dist/server.js",
+    "start": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir dist --ignore src/test",
+    "serve": "rm -r dist/test && node dist/server.js",
     "localprod": "npm install && npm run build && cross-env PORT=80 NODE_ENV=production npm run serve",
-    "heroku": "node dist/server.js",
+    "test": "babel src --out-dir dist && mocha 'dist/test/**/*.js'",
     "lint": "eslint src/"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
