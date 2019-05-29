@@ -24,17 +24,19 @@ Endpoint [http://localhost:3000/](http://localhost:3000/)
 ##### Request Example:
 ```
 curl -X POST \
-  http://localhost:3000/team/salary \
+  https://resuelve-soccer.herokuapp.com/team/salary \
   -H 'Accept: */*' \
   -H 'Cache-Control: no-cache' \
   -H 'Connection: keep-alive' \
   -H 'Content-Type: application/json' \
-  -H 'Host: localhost:3000' \
+  -H 'Host: resuelve-soccer.herokuapp.com' \
+  -H 'Postman-Token: 2fbccd29-0d66-495a-9ce2-fd61610a6c4f,8991355a-0071-4df7-94dd-e472aff38861' \
+  -H 'User-Agent: PostmanRuntime/7.13.0' \
   -H 'accept-encoding: gzip, deflate' \
   -H 'cache-control: no-cache' \
   -H 'content-length: 700' \
-  -d '[
-   {
+  -d '[  
+   {  
       "nombre":"Juan Perez",
       "nivel":"C",
       "goles":10,
@@ -43,7 +45,7 @@ curl -X POST \
       "sueldo_completo":null,
       "equipo":"rojo"
    },
-   {
+   {  
       "nombre":"EL Cuauh",
       "nivel":"Cuauh",
       "goles":30,
@@ -52,7 +54,7 @@ curl -X POST \
       "sueldo_completo":null,
       "equipo":"azul"
    },
-   {
+   {  
       "nombre":"Cosme Fulanito",
       "nivel":"A",
       "goles":7,
@@ -62,7 +64,7 @@ curl -X POST \
       "equipo":"azul"
 
    },
-   {
+   {  
       "nombre":"El Rulo",
       "nivel":"B",
       "goles":9,
