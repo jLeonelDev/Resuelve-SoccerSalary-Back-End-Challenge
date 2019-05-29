@@ -8,7 +8,7 @@
     "e2e-start": "babel src --out-dir dist && npm run serve",
     "e2e-test": "cross-env NODE_ENV=test mocha 'dist/test/e2e/**/*.js'",
     "lint": "eslint src/",
-    "localprod": "npm install && npm run build && cross-env PORT=80 NODE_ENV=production npm run serve",
+    "local-prod": "npm install && npm run build && cross-env PORT=80 NODE_ENV=production npm run serve",
     "build": "babel src --out-dir dist --ignore src/test",
     "serve": "node dist/server.js"
   },
