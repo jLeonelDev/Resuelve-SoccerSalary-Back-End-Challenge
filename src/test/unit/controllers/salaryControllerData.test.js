@@ -69,4 +69,18 @@ const playerData = {
   equipo: 'rojo',
 };
 
-export { teamData, teamBlueData, playerData };
+const teamDataWrong = [
+  {
+    nombre: 'Juan Perez',
+    nivel: 'c',
+    goles: -10,
+    sueldo: -50000,
+    bono: '25000',
+    sueldo_completo: 'null',
+    equipo: 'rojo',
+  },
+];
+
+export {
+  teamData, teamBlueData, playerData, teamDataWrong,
+};
