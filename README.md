@@ -20,7 +20,7 @@ cd Resuelve-SoccerSalary-Back-End-Challenge
 npm install
 npm run start
 ```
-Endpoint [http://localhost:3000/)](http://localhost:3000/)
+Endpoint [http://localhost:3000/](http://localhost:3000/)
 ##### Request Example:
 ```
 curl -X POST \
@@ -84,7 +84,7 @@ npm run unit-test
 Open two terminals:
 
 In one terminal first execute:
-An application instance will be running at: [http://localhost:3000/)](http://localhost:3000/)
+An application instance will be running at: [http://localhost:3000/](http://localhost:3000/)
 ```
 npm run e2e-start
 ```
