@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "nodemon --exec babel-node src/server.js",
-    "test": "babel src --out-dir dist && mocha 'dist/test/**/*.js'",
+    "unit-test": "babel src --out-dir dist && cross-env NODE_ENV=test mocha 'dist/test/unit/**/*.js'",
+    "e2e-start": "babel src --out-dir dist && npm run serve",
+    "e2e-test": "cross-env NODE_ENV=test mocha 'dist/test/e2e/**/*.js'",
     "lint": "eslint src/",
     "localprod": "npm install && npm run build && cross-env PORT=80 NODE_ENV=production npm run serve",
     "build": "babel src --out-dir dist --ignore src/test",
@@ -27,6 +29,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
     "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",

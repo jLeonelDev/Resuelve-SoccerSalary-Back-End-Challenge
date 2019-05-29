@@ -71,3 +71,14 @@ function salaryController(body, callback) {
 }
 
 export default salaryController;
+
+if (process.env.NODE_ENV === 'test') {
+  module.exports = {
+    obtainSalaryScope,
+    obtainSalary,
+    obtainTeamSalaryScope,
+    processPlayer,
+    processTeam,
+    salaryController,
+  };
+}

@@ -13,7 +13,6 @@
         "ecmaVersion": 2018
     },
     "rules": {
-      "import/no-extraneous-dependencies": ["error", {"devDependencies": ["src/test/**/*.js"]}],
-      "no-undef": [2, {"ignoreBuiltinGlobals": ["describe", "it"]}]
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": ["src/test/**/*.js"]}]
     }
 }
